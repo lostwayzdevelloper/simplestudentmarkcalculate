@@ -1,0 +1,180 @@
+html with javascript file
+
+<!DOCTYPE html>
+<html lang="en" style="font-size: 15px;font-family: robot, Arial, sans-serif;" lang="en" system-icons typography typography-spacing darker-dark-theme darker-dark-theme-deprecate><head><meta http-equiv="origin-trial" content="Ash03CRZ76itNFXlh04s/Kx5TBY+uSojTNLnxUHnV26xBFl3D+0epAJQ98cRF8WLbalbrCwfmJ4GSLOYXit09g0AAABteyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJQcml2YWN5U2FuZGJveEFkc0FQSXMiLCJleHBpcnkiOjE2ODgwODMxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="/>>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student marks</title>
+    <link rel="stylesheet" type="text/css" href="student.css">
+</head>
+<body>
+    <center>
+        <h2>L3 sod student marks</h2>
+        <fieldset>
+            <form name="form1">
+            <table border="0" cellspacing="0">
+                <tr>
+                    <th>specific subjects</th>
+                    <th>general subject</th>
+                </tr>
+
+                 <tr>
+                    <td><input type="number" name="n1" placeholder="vue js" id="input"></td>
+                    <td><input type="number" name="n2" placeholder="mathematics" id="input"></td>
+                </tr>
+
+                 <tr>
+                    <td><input type="number" name="n3" placeholder="javascript" id="input"></td>
+                    <td><input type="number" name="n4" placeholder="phyisics" id="input"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="number" name="n5" placeholder="javascript" id="input"></td>
+                    <td><input type="number" name="n6" placeholder="phyisics" id="input"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="number" name="n7" placeholder="develop web" id="input"></td>
+                    <td><input type="number" name="n8" placeholder="history" id="input"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="number" name="n9" placeholder="conduct version" id="input"></td>
+                    <td><input type="number" name="n10" placeholder="english" id="input"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="number" name="n11" placeholder="design ui" id="input"></td>
+                    <td><input type="number" name="n12" placeholder="kinyarwanda" id="input"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="number" name="n13" placeholder="analyze pro" id="input"></td>
+                    <td><input type="number" name="n14" placeholder="create buss" id="input"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="number" name="n15" placeholder="p h  p" id="input"></td>
+                    <td><input type="number" name="n16" placeholder="communication" id="input"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="number" name="n17" placeholder="python" id="input"></td>
+                    <td><input type="number" name="n18" placeholder="kiswahili" id="input"></td>
+                </tr>
+            </table>
+        </form>
+        </fieldset>
+            <fieldset>
+            <button id="button" onclick="marks()">report</button><br><br>
+        
+      
+            <lost>sum of all marks:</lost><span id="ibyambere"></span><br><br>
+           <lost>percentage of marks:</lost><span id="ibyakabiri"></span>%<br><br>
+           <lost> advise:</lost><span id="ibyagatatu"></span><br><br>
+           <lost>decision:</lost> <span id="ibyakane"></span><br>
+            
+        </fieldset>
+        <br><br>
+        <button onclick="reload()">refresh</button>&nbsp;&nbsp;
+    
+    <button id="button1" onclick="some()">back</button></a>
+</center>
+    
+</body>
+<script>
+    var welcome=alert("welcome to calculate your marks")
+    var a;
+    var b;
+    var c;
+    var d;
+    var e;
+    var f;
+    var g;
+    var h;
+    var i;
+    var j;
+    var k;
+    var l;
+    var m;
+    var n;
+    var o;
+    var p;
+    var q;
+    var r;
+    
+    
+    var result=0;
+    var avg=0;
+    function marks(){
+        a=parseFloat(form1.n1.value);
+        b=parseFloat(form1.n2.value);
+        c=parseFloat(form1.n3.value);
+        d=parseFloat(form1.n4.value);
+        e=parseFloat(form1.n5.value);
+        f=parseFloat(form1.n6.value);
+        g=parseFloat(form1.n7.value);
+        h=parseFloat(form1.n8.value);
+        i=parseFloat(form1.n9.value);
+        j=parseFloat(form1.n10.value);
+        k=parseFloat(form1.n11.value);
+        l=parseFloat(form1.n12.value);
+        m=parseFloat(form1.n13.value);
+        n=parseFloat(form1.n14.value);
+        o=parseFloat(form1.n15.value);
+        p=parseFloat(form1.n16.value);
+        q=parseFloat(form1.n17.value);
+        r=parseFloat(form1.n18.value);
+        result=a+b+c+d+e+f+g+h+i+j+k+l+m+n+o+p+q+r;
+        avg=result/18
+       
+
+        document.getElementById("ibyambere").innerHTML=result;
+        document.getElementById("ibyakabiri").innerHTML=avg ;
+      
+        if(avg>=70){
+            document.getElementById("ibyakane").innerHTML="pass";
+        }
+        else{
+            document.getElementById("ibyakane").innerHTML="fail"; 
+        }
+        
+        if(result>=1200){
+            document.getElementById("ibyagatatu").innerHTML="conglatration you won!!!";
+        }
+        else{
+            document.getElementById("ibyagatatu").innerHTML="try to work hard please!!!";
+        }
+
+       
+      
+    };
+  
+    
+    function reload(){
+        location.reload()
+    }
+  
+</script>
+</html>
+css file
+fieldset{
+    width: 200px;
+    background-color:white;
+}
+button{
+    background-color: black;
+    color: fuchsia;
+    text-align: center;
+}
+h2{
+    color: fuchsia;
+}
+span{
+    color: red;
+}
+html{
+    background-color: mintcream;
+}
